@@ -72,7 +72,7 @@ namespace Plugin.InAppBilling
         ServiceTimeout,
         AppleTermsConditionsChanged,
         NetworkError
-	}
+    }
 
     /// <summary>
     /// Purchase exception

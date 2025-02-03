@@ -83,7 +83,11 @@ namespace Plugin.InAppBilling
                 BillingClient = BillingClientBuilder.EnablePendingPurchases(pendingParams).Build();
             }
             else
-                BillingClient = BillingClientBuilder.Build();
+
+            {
+                var pendingParams = PendingPurchasesParams.NewBuilder().EnableOneTimeProducts().Build();
+                BillingClient = BillingClientBuilder.EnablePendingPurchases(pendingParams).Build();
+            }
 
             BillingClient.StartConnection(OnSetupFinished, OnDisconnected);
             // TODO: stop trying
@@ -135,7 +139,6 @@ namespace Plugin.InAppBilling
 
             return Task.CompletedTask;
         }
-
 
         /// <summary>
         /// Gets or sets if in testing mode. Only for UWP
