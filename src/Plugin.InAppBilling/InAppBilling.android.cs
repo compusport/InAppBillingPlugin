@@ -28,8 +28,7 @@ namespace Plugin.InAppBilling
         /// This is set from the MainApplication.cs file that was laid down by the plugin
         /// </summary>
         /// <value>The context.</value>
-        static Activity Activity =>
-            Platform.CurrentActivity ?? throw new NullReferenceException("Current Activity is null, ensure that the MainActivity.cs file is configuring .NET MAUI in your source code so the In App Billing can use it.");
+        static Activity Activity => Application.Context as Android.App.Activity;
 
         static Context Context => Application.Context;
 
