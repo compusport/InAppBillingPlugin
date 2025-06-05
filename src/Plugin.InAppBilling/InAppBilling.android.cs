@@ -28,7 +28,7 @@ namespace Plugin.InAppBilling
         /// This is set from the MainApplication.cs file that was laid down by the plugin
         /// </summary>
         /// <value>The context.</value>
-        static Activity Activity => Application.Context as Android.App.Activity;
+        static Activity Activity => Platform.CurrentActivity ?? Application.Context as Android.App.Activity;
 
         static Context Context => Application.Context;
 
