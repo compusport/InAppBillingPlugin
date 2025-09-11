@@ -101,7 +101,7 @@
 
 
   <ItemGroup Condition=" $(TargetFramework.Contains('net9.0-android')) ">
-    <PackageReference Include="Microsoft.Maui.Essentials" Version="9.0.100" />
+    <PackageReference Include="Microsoft.Maui.Essentials" Version="9.0.110" />
   </ItemGroup>
 
 
